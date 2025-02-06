@@ -5,41 +5,38 @@
   <meta charset="UTF-8">
   <title>Fullscreen HTML5 Page Background Video</title>
   
-  createChat({
-	webhookUrl: '',
-	webhookConfig: {
-		method: 'POST',
-		headers: {}
-	},
-	target: '#n8n-chat',
-	mode: 'window',
-	chatInputKey: 'HI',
-	chatSessionKey: 'd7afa0aedaf542c3ab6ccb9f34f3d759',
-	metadata: {},
-	showWelcomeScreen: false,
-	defaultLanguage: 'en',
-	initialMessages: [
-		'Hi there! 👋',
-		'My name is Nathan. How can I assist you today?'
-	],
-	i18n: {
-		en: {
-			title: 'Hi there! 👋',
-			subtitle: "Start a chat. We're here to help you 24/7.",
-			footer: '',
-			getStarted: 'New Conversation',
-			inputPlaceholder: 'Type your question..',
-		},
-	},
-});
-  
+
       <link rel="stylesheet" href="css/style.css">
 
   
 </head>
 
 <body>
-
+<!-- Widget Configuration -->
+<script>
+    window.ChatWidgetConfig = {
+        webhook: {
+            url: 'https://amuai.app.n8n.cloud/webhook/1cac295a-4838-458a-b42a-fa6f6a0598d2/chat',
+            route: 'general'
+        },
+        branding: {
+            logo: 'https://github.com/viktorobishamu/moorevip/blob/3552b9e799fae5bee731575e4e8ace8d6f5cfba3/new_project3/app/src/main/res/drawable/logo.png',
+            name: 'AMU ABOGADOS ALIADOS', // Your company name
+            welcomeText: 'Hola , como puedo ayudarte hoy?', //Welcome message
+            responseTimeText: 'respondemos rapidamente' //Response time message
+        },
+        style: {
+            primaryColor: '#854fff', //Primary color
+            secondaryColor: '#6b3fd4', //Secondary color
+            position: 'right', //Position of the widget (left or right)
+            backgroundColor: '#ffffff', //Background color of the chat widget
+            fontColor: '#333333' //Text color for messages and interface
+        }
+    };
+</script>
+<script src="https://nocodeveloper.com/chat.js"></script>
+<!-- Widget Script -->
+	
   <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
   <!-- 
 - Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
