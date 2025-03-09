@@ -359,7 +359,7 @@
             <div class="brand-header">
                 <img src="${config.branding.logo}" alt="${config.branding.name}">
                 <span>${config.branding.name}</span>
-                <button class="close-button">Ã—</button>
+                <button class="close-button">X</button>
             </div>
             <div class="chat-messages"></div>
             <div class="chat-input">
